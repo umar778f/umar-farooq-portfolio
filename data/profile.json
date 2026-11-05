@@ -1,0 +1,53 @@
+{
+  "profile": {
+    "name": "Umar Farooq",
+    "initials": "UF",
+    "role": "Full Stack Developer & Software Engineer",
+    "location": "Pakistan",
+    "email": "25005376088@skt.umt.edu.pk",
+    "github": "https://github.com/umar778f",
+    "linkedin": "https://www.linkedin.com/in/umar778f/",
+    "tagline": "Specializing in Artificial Intelligence, machine learning workflows, scalable backend systems, and modern full-stack development.",
+    "bio": "I am a Full Stack Developer & Software Engineer pursuing a BS in Artificial Intelligence at the University of Management and Technology (UMT).\n\nMy focus centers on developing intelligent software systems, machine learning pipelines, and robust backend APIs. I bridge deep technical exploration with practical engineering to build reliable, high-performance solutions.",
+    "avatar": "assets/umar.png",
+    "avatarAlt": "Umar Farooq - Profile Portrait"
+  },
+  "education": {
+    "degree": "BS Artificial Intelligence",
+    "institution": "University of Management and Technology (UMT)",
+    "status": "Currently pursuing",
+    "location": "Pakistan"
+  },
+  "roles": [
+    "Full Stack Developer",
+    "Software Engineer",
+    "AI & ML Developer"
+  ],
+  "skills": {
+    "programming": [
+      { "name": "Python", "level": "Advanced" }
+    ],
+    "ai_ml": [
+      { "name": "PyTorch", "level": "Core" },
+      { "name": "TensorFlow", "level": "Core" },
+      { "name": "OpenCV", "level": "Computer Vision" },
+      { "name": "Hugging Face", "level": "Transformers & Models" }
+    ],
+    "frameworks": [
+      { "name": "FastAPI", "level": "High Performance APIs" },
+      { "name": "OpenAI", "level": "LLM Integration" },
+      { "name": "LangChain", "level": "Agentic Workflows" }
+    ],
+    "tools": [
+      { "name": "Docker", "level": "Containerization" },
+      { "name": "Git", "level": "Version Control" },
+      { "name": "n8n", "level": "Workflow Automation" }
+    ]
+  },
+  "currently": [
+    "Advancing Deep Learning & Computer Vision architectures",
+    "Building Agentic Workflows with LangChain & OpenAI",
+    "Deploying High-Throughput APIs with FastAPI & Docker"
+  ]
+}
+

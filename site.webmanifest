@@ -1,0 +1,17 @@
+{
+  "name": "Umar Farooq — Full Stack Developer & Software Engineer",
+  "short_name": "Umar Farooq",
+  "description": "Portfolio of Umar Farooq, Full Stack Developer and BS Artificial Intelligence student at UMT building AI systems, scalable APIs, and intelligent applications.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05060a",
+  "theme_color": "#05060a",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+

@@ -1,0 +1,26 @@
+{
+  "name": "umar-farooq-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website of Umar Farooq, Full Stack Developer & Software Engineer.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "software-engineer",
+    "artificial-intelligence",
+    "glassmorphism",
+    "fastapi",
+    "pytorch",
+    "python"
+  ],
+  "author": "Umar Farooq <25005376088@skt.umt.edu.pk>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umar778f"
+  }
+}
+
