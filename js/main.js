@@ -28,39 +28,59 @@ function initTypewriter() {
   let roleIndex = 0;
   let charIndex = roles[0].length;
   let isDeleting = true;
+  let timerId = null;
+
+  function scheduleTick(delay) {
+    clearTimeout(timerId);
+    timerId = setTimeout(tick, delay);
+  }
 
   function tick() {
     if (document.hidden) {
-      setTimeout(tick, 400);
       return;
     }
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      subtitleEl.textContent = roles[0];
       return;
     }
 
     const currentWord = roles[roleIndex];
-    charIndex += isDeleting ? -1 : 1;
-    subtitleEl.textContent = currentWord.slice(0, charIndex);
 
-    let speed = isDeleting ? 45 : 85;
+    if (isDeleting) {
+      charIndex--;
+      subtitleEl.textContent = currentWord.slice(0, charIndex);
 
-    if (charIndex === 0 && isDeleting) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      speed = 280;
-    } else if (!isDeleting && charIndex === currentWord.length) {
-      isDeleting = true;
-      speed = 1900;
+      if (charIndex === 0) {
+        // Paused in-between after deleting: calm breath before next title
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        scheduleTick(700);
+        return;
+      }
+      scheduleTick(60);
+    } else {
+      charIndex++;
+      subtitleEl.textContent = currentWord.slice(0, charIndex);
+
+      if (charIndex === currentWord.length) {
+        // Paused on full word: generous reading time for the user
+        isDeleting = true;
+        scheduleTick(2400);
+        return;
+      }
+      scheduleTick(110);
     }
-
-    setTimeout(tick, speed);
   }
 
-  // Start after brief initial delay
-  setTimeout(tick, 1800);
+  // Initial delay before starting the deletion/typing cycle
+  scheduleTick(2000);
 
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) tick();
+    if (document.hidden) {
+      clearTimeout(timerId);
+    } else {
+      scheduleTick(600);
+    }
   });
 }
 
